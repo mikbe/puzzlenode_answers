@@ -1,0 +1,32 @@
+Run instruction:
+
+From a command prompt type:
+ruby runme.rb
+
+Output will be in the solution.txt file.
+
+If you wish to run the script with something other than the 
+default files you may specify them on the command line as well.
+
+ruby runme.rb  [rental rates file], [dates file], [output file], [TAX_RATE]
+
+Command line parameters may be given partially but must be given in order,
+that is to say if you want to give an output file you must also give a 
+rental rates file and dates file and the default tax rate will be used.
+
+If you just want to give a rental rates file the default dates file, 
+output file, and tax rate will be used.
+
+Default values:
+
+rental rates file - "INPUT.json"
+dates file        - "input.txt"
+output file       - "solution.txt"
+Tax rate          - 1.0411416
+
+Notes:
+If you do not have the JSON gem installed a simplified JSON parser I wrote will be used.
+It's not a great parser it's just enough to get the job done.
+
+I went a overboard on this one and separated the controller logic from the model logic.
+It's overkill and premature optimization but I was using it as an exercise to practice a little MVC.

@@ -1,0 +1,25 @@
+Run instruction:
+
+From a command prompt type:
+ruby runme.rb
+
+Output will be in the solution.txt file.
+
+If you wish to run the script with something other than the 
+default files you may specify them on the command line as well.
+
+ruby runme.rb [input file] [output file]
+
+Command line parameters may be given partially but must be given in order,
+that is to say if you want to give an output file you must give an input
+file but if you just want to give an input file the default output file
+name will be used.
+
+Default values:
+
+input file - "INPUT.json"
+ouput file - "solution.txt"
+
+Notes:
+If you do not have the JSON gem installed a simplified JSON parser I wrote will be used.
+It's not a great parser it's just enough to get the job done.

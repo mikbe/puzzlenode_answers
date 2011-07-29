@@ -1,0 +1,31 @@
+Run instruction:
+
+From a command prompt type:
+ruby runme.rb
+
+Output will be in the solution.txt file.
+
+If you wish to run the script with something other than the 
+default files you may specify them on the command line as well.
+
+ruby runme.rb [game data file] [output file]
+
+Command line parameters may be given partially but must be given in order,
+that is to say if you want to give an output file you must give a game data
+file but if you just want to give an game data file the default output file
+name will be used (solution.txt).
+
+Default values:
+
+game data file  - "INPUT.txt"
+ouput file      - "solution.txt"
+
+Notes:
+I didn't include this as one of my two entries because the code if fairly ugly
+and isn't very well refactored. I was afraid I might not have enough time to
+get my submissions in before all the slots were taken so I cleaned it up a
+little but it's really ugly and is more of a kludge of a solution than a 
+well designed one.
+
+Hopefully including this will show how much I need the course and am willing
+to work if allowed to participate.
