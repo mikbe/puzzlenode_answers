@@ -27,7 +27,6 @@ module Logo
     end
     
     def FD(distance)
-      
       radian = (Math::PI / 180) * @heading
       distance.times do
         self.position = {
@@ -38,23 +37,22 @@ module Logo
     end
 
     def position=(new_position)
-      #raise Exception, "Went null: #{new_position[:y]}" unless @field[new_position[:y]]
-      #puts "x: #{new_position[:x]}; y: #{new_position[:x]}"
+      bounds_check(new_position)
+      mark_field(new_position)
       @position = new_position
-      begin
-        @field.reverse[new_position[:y]][new_position[:x]] = "X"
-        #puts @field.reverse[new_position[:y]][new_position[:x]]
-      rescue Exception
-        puts
-        puts "x: #{new_position[:x]}; y: #{new_position[:x]}"
-        
-        puts @field[new_position[:y]].class
-        puts @field.length
-        puts @field.reverse[new_position[:y]].length
-        puts
-        abort
+    end
+  
+    private
+  
+    def mark_field(position)
+      @field.reverse[position[:y]][position[:x]] = "X"
+    end
+  
+    def bounds_check(position)
+      [:x, :y].each do |axis|
+        position[axis] = @field.size - 1 if position[axis] == -1
+        position[axis] = 0 if position[axis] == @field.size
       end
-      @position
     end
   
   end

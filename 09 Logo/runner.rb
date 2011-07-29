@@ -3,9 +3,11 @@ $: << '.'
 
 require 'logo'
 
-commands = File.read("source/complex.logo")
+input = "simple"
+
+commands = File.read("source/#{input}.logo")
 parser = Logo::Parser.new
 parser.run commands
-File.open("test2.txt", "w") do |file|
+File.open("output/#{input}.txt", "w") do |file|
   parser.field.each {|line| file.puts line.join(" ")}
 end
